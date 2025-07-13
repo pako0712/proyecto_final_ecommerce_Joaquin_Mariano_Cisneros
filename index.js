@@ -30,16 +30,16 @@ app.get("/products", (req, res)=>{
     }
     res.json(products);
 })
-// RUTA A FILTRADO POR NOMBRE
-// app.get("/products/search", (req, res) => {
-//   const { name } = req.query;
+// RUTA A FILTRADO DE PRODUCTOS
+app.get("/products/search", (req, res) => {
+   const { name } = req.query;
 
-//   const filteredProducts = products.filter((p) =>
-//     p.nombre.toLowerCase().includes(nombre.toLowerCase())
-//   );
+   const filteredProducts = products.filter((p) =>
+     p.nombre.toLowerCase().includes(nombre.toLowerCase())
+   );
 
-//   return res.json(filteredProducts);
-// });
+   return res.json(filteredProducts);
+ });
 // RUTA A UN PRODUCTO
 app.get("/products/:id", (req, res)=>{
     const id= parseInt(req.params.id);
