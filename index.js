@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.json({ message: "Servidor funcando" });
+  res.json({ message: "APPI Rest en Node.js by Joaquin Mariano Cisneros" });
 });
 
 import productsRouter from "./src/routes/products.router.js";
